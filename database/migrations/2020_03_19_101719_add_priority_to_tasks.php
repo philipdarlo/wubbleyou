@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTasksTable extends Migration
+class AddPriorityToTasks extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,9 @@ class CreateTasksTable extends Migration
      */
     public function up()
     {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->timestamps();
+        //
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->string('priority');
         });
     }
 
@@ -26,6 +25,9 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tasks');
+        //
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->dropColumn('priority');
+        });
     }
 }

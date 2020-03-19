@@ -25,6 +25,22 @@
                             </div>
                         </div>
 
+                        <!-- Priority Level -->
+
+                        <div class="form-group">
+                            <label for="priority-level" class="col-sm-3 control-label">Priortiy Level</label>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-control" id="priority-level" name="priority" id="priority-select">
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Add Task Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
